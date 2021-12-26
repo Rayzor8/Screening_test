@@ -2,7 +2,6 @@ import React from 'react';
 import './css/Comment_item.css';
 
 const CommentItem = ({ data }) => {
-   console.log(data.replies);
    return (
       <li>
          <div className="body-section">
@@ -19,11 +18,19 @@ const CommentItem = ({ data }) => {
             <button>Down</button>
          </div>
          {data.replies.length > 0 &&
-            data.replies.map(el => (
-               <div key={el.id} className='msg-section'>
-                  <h1>{el.author}</h1>
-                  <p>{el.date}</p>
-                  <p>{el.message}</p>
+            data.replies.map((el) => (
+               <div key={el.id} className="msg-section">
+                  <img src={el.avatar} alt="" className="img-avatar" />
+                  <div>
+                     <h1>{el.author}</h1>
+                     <p>{el.date}</p>
+                     <p>{el.message}</p>
+                     <div className='msg-cta'>
+                        <p>{el.point} point</p>
+                        <button>Up</button>
+                        <button>Down</button>
+                     </div>
+                  </div>
                </div>
             ))}
       </li>

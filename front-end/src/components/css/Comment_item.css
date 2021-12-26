@@ -21,9 +21,21 @@ li .card-cta{
     border-radius: 50%;
 }
 
+/* message section */
 .msg-section{
     background-color: white;
     display: flex;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.img-avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.msg-cta{
+    display: flex;
     gap: 0.2rem;
-    flex-direction: column;
 }
