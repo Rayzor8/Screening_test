@@ -24,7 +24,6 @@ const CommentsContext = ({ children }) => {
       fetchData();
    }, []);
 
-  console.log(state)
    return (
       <commentContextData.Provider value={{ state }}>
          {children}

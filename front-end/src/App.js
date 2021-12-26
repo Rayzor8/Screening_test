@@ -1,4 +1,3 @@
-import './App.css';
 import CommentLists from './components/CommentLists';
 import CommentsContext from './contexts/CommentsContext';
 

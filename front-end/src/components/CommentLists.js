@@ -1,6 +1,8 @@
 import React from 'react';
 import { useContext } from 'react';
 import { commentContextData } from '../contexts/CommentsContext';
+import CommentItem from './CommentItem';
+import './css/Comment_lists.css';
 
 const CommentLists = () => {
    const { state } = useContext(commentContextData);
@@ -8,12 +10,10 @@ const CommentLists = () => {
 
    return (
       <div>
-         <ul>
+         <ul className='comment_lists'>
             {comments && comments.length > 0 ? (
                comments.map((data) => (
-                  <li key={data.id}>
-                     <h1>{data.author}</h1>
-                  </li>
+                  <CommentItem key={data.id} data={data}/>
                ))
             ) : (
                <h1>Loading....</h1>
