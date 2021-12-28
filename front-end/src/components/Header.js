@@ -10,14 +10,21 @@ const Header = () => {
          </div>
          <div className="search_bar">
             <input type="text" className="search_bar" />
-            <button className='search_button'>
+            <button className="search_button">
                <FaSearch className="search_icon" />
             </button>
          </div>
-         <nav>
+         <nav id="nav">
             <ul>
-               <li>
-                  <a href="*">Category</a>
+               <li className="dropdown">
+                  <button className="dropbtn">Dropdown</button>
+                  <div className="dropdown-content">
+                     <a href="*">Linux</a>
+                     <a href="*">Windows</a>
+                     <a href="*">Mac OS</a>
+                     <a href="*">Android</a>
+                     <a href="*">IOS</a>
+                  </div>
                </li>
                <li>
                   <a href="*">Login</a>

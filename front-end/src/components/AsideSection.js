@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/AsideSection.css';
+import './css/Aside_section.css';
 
 const AsideSection = () => {
    const diskusiLists = [
@@ -15,7 +15,8 @@ const AsideSection = () => {
          <ul>
             {diskusiLists.map((data, index) => (
                <li key={index}>
-                  <span>{index + 1}</span> {data}
+                  <span>{index + 1}</span>
+                  <a href="*">{data}</a>
                </li>
             ))}
          </ul>

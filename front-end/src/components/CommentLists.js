@@ -13,7 +13,7 @@ const CommentLists = () => {
    const { comments } = state;
 
    return (
-      <>
+      <div>
          <Header />
          <main className="main-container">
             <section>
@@ -31,7 +31,7 @@ const CommentLists = () => {
             <AsideSection/>
             <AddForm />
          </main>
-      </>
+      </div>
    );
 };
 
