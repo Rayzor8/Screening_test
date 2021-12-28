@@ -1,0 +1,15 @@
+aside{
+    padding: 0 1rem;
+}
+
+aside ul li {
+    list-style: none;
+}
+
+aside ul li > span{
+    background-color: black;
+    color: white;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+
