@@ -1,8 +1,10 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { FaSearch } from 'react-icons/fa';
 import './css/Header.css';
+import { commentContextData } from '../contexts/CommentsContext';
 
 const Header = () => {
+   const {dispatch} = useContext(commentContextData);
    return (
       <header>
          <div id="brand">
@@ -26,11 +28,11 @@ const Header = () => {
                      <a href="*">IOS</a>
                   </div>
                </li>
-               <li>
-                  <a href="*">Login</a>
+               <li onClick={()=>dispatch({type:'TOGGLE_LOGIN'})}>
+                  Login
                </li>
-               <li>
-                  <a href="*">Register</a>
+               <li onClick={()=>dispatch({type:'TOGGLE_REGISTER'})}>
+                  Register
                </li>
             </ul>
          </nav>
