@@ -94,9 +94,9 @@ nav ul {
       justify-content: start;
    }
    .search_bar {
-      visibility: hidden;
+      display: none;
    }
    nav{
-       visibility: hidden;
+       display: none;
    }
 }

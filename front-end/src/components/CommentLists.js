@@ -17,11 +17,11 @@ const CommentLists = () => {
    return (
       <div>
          <Header />
-         <LoginModal/>
-         <RegisterModal/>
+         <LoginModal />
+         <RegisterModal />
          <main className="main-container">
             <section>
-            <ArticleSection/>
+               <ArticleSection />
                <ul className="comment_lists">
                   {comments && comments.length > 0 ? (
                      comments.map((data) => (
@@ -32,7 +32,7 @@ const CommentLists = () => {
                   )}
                </ul>
             </section>
-            <AsideSection/>
+            <AsideSection />
             <AddForm />
          </main>
       </div>

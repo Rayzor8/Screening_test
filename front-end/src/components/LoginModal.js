@@ -20,8 +20,21 @@ const LoginModal = () => {
             overlayClassName="myoverlay"
             closeTimeoutMS={500}
          >
-            <div>My Login Modal</div>
-            <button onClick={toggleModal}>Close modal</button>
+            <div className="form_container">
+               <button className="close_button" onClick={toggleModal}>
+                  X
+               </button>
+               <h3>Login</h3>
+               <div className="input_container">
+                  <label htmlFor="email">Email</label>
+                  <input type="email" />
+               </div>
+               <div className="input_container">
+                  <label htmlFor="password">Password</label>
+                  <input type="password" />
+               </div>
+               <button className="login_button">Login</button>
+            </div>
          </Modal>
       </div>
    );

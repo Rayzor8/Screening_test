@@ -5,6 +5,7 @@ import './css/Add_form.css';
 const AddForm = () => {
    return (
       <form className="add_form">
+         <div className="text-divider">Text divider</div>
          <div className="input_container">
             <label htmlFor="nama" style={{ visibility: 'hidden' }}>
                Nama

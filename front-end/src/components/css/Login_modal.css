@@ -9,7 +9,9 @@
    overflow: auto;
    border-radius: 4px;
    outline: none;
-   padding: 20px;
+   padding: 0;
+   width: 500px;
+   max-width: 80%;
 }
 
 .myoverlay {
@@ -32,4 +34,38 @@
 
 .ReactModal__Overlay--before-close {
    opacity: 0;
+}
+
+.form_container {
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.form_container .login_button {
+   width: max-content;
+   padding: 10px 20px;
+}
+
+.form_container .input_container {
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+
+.form_container .input_container input {
+   padding: 10px 20px;
+   border-color: black;
+   border-radius: 4px;
+}
+
+.form_container .close_button {
+   position: absolute;
+   top: 0;
+   right: 0;
+   background-color: red;
+   z-index: 1000;
+   width: 30px;
+   height: 30px;
 }
