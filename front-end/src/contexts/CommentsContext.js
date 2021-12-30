@@ -12,17 +12,7 @@ let initialState = {
     registerModal:false
 }
 
-let formInitialState = {
-   loginForm : {
-      email:'',
-      password:''
-   },
-   registerForm : {
-      name:'',
-      email:'',
-      password:''
-   }
-}
+let formInitialState = {}
 
 const CommentsContext = ({ children }) => {
    const [state, dispatch] = useReducer(commentsReducer, initialState);

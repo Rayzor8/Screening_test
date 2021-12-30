@@ -1,6 +1,10 @@
 export const formsReducer = (state, action) => {
-    if (action.type === 'FORM_LOGIN')
-       console.log('login');
-    return state;
- };
- 
+   console.log(action)
+   if (action.type === 'FORM_COMMENT'){
+      return {
+         ...state,
+         commentForm:action.payload
+      }
+   }
+   return state;
+};
