@@ -26,6 +26,7 @@ const AddForm = () => {
       const { name, value } = e.target;
       setFormData({ ...formData, [name]: value });
    };
+   
 
    const { name, email, comment } = formData;
 
@@ -39,7 +40,7 @@ const AddForm = () => {
       if (Object.keys(formErrors).length === 0 && isSubmit) {
          document.location.reload();
       }
-   }, [formErrors]);
+   }, [formErrors,isSubmit]);
 
    const validate = (values) => {
       const errorValidate = {};
