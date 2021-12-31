@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import AddFormButtons from './AddFormButtons';
+import AddFormButtons from './buttonComponents/AddFormButtons';
 import './css/Add_form.css';
 
 const AddForm = () => {

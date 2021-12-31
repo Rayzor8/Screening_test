@@ -4,7 +4,7 @@ import axios from 'axios';
 import { formsReducer } from '../reducers/formsReducer';
 
 export const commentContextData = createContext();
-const APIURL = 'http://localhost:3100/comments';
+export const APIURL = 'http://localhost:3100/comments';
 
 let initialState = {
     comments:[],
@@ -17,6 +17,7 @@ let formInitialState = {}
 const CommentsContext = ({ children }) => {
    const [state, dispatch] = useReducer(commentsReducer, initialState);
    const [forms,formsDispatch] = useReducer(formsReducer,formInitialState)
+   console.log(state)
 
    useEffect(() => {
       const fetchData = async () => {

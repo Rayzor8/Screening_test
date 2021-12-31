@@ -1,10 +1,12 @@
 import React from 'react';
+import ButtonArrowDown from './buttonComponents/ButtonArrowDown';
+import ButtonArrowUp from './buttonComponents/ButtonArrowUp';
 import './css/Comment_item.css';
-import {FaArrowDown, FaArrowUp} from 'react-icons/fa';
 
 const CommentItem = ({ data }) => {
+   const [doneUpdate, setDoneUpdate] = React.useState(false);
    return (
-      <li className='comment_item'>
+      <li className="comment_item">
          <div className="body-section">
             <img src={data.avatar} alt="avatar" className="img" />
             <div>
@@ -15,8 +17,16 @@ const CommentItem = ({ data }) => {
          </div>
          <div className="card-cta">
             <p>{data.point} Point</p>
-            <button><FaArrowUp/></button>
-            <button><FaArrowDown/></button>
+            <ButtonArrowUp
+               data={data}
+               doneUpdate={doneUpdate}
+               setDoneUpdate={setDoneUpdate}
+            />
+            <ButtonArrowDown
+               data={data}
+               doneUpdate={doneUpdate}
+               setDoneUpdate={setDoneUpdate}
+            />
          </div>
          {data.replies.length > 0 &&
             data.replies.map((el) => (
@@ -26,10 +36,18 @@ const CommentItem = ({ data }) => {
                      <h1>{el.author}</h1>
                      <p>{el.date}</p>
                      <p>{el.message}</p>
-                     <div className='msg-cta'>
+                     <div className="msg-cta">
                         <p>{el.point} point</p>
-                        <button><FaArrowUp/></button>
-                        <button><FaArrowDown/></button>
+                        <ButtonArrowUp
+                           data={el}
+                           doneUpdate={doneUpdate}
+                           setDoneUpdate={setDoneUpdate}
+                        />
+                        <ButtonArrowDown
+                           data={el}
+                           doneUpdate={doneUpdate}
+                           setDoneUpdate={setDoneUpdate}
+                        />
                      </div>
                   </div>
                </div>
