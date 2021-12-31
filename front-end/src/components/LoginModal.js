@@ -59,6 +59,7 @@ const LoginModal = () => {
       return errorValidate;
    };
 
+
    Modal.setAppElement('#root');
    return (
       <div>
@@ -72,7 +73,7 @@ const LoginModal = () => {
          >
             <div className="form_container">
                <form onSubmit={handleSubmit}>
-                  <button className="close_button" onClick={toggleModal}>
+                  <button className="close_button" onClick={toggleModal} type='button'>
                      X
                   </button>
                   <h3>Login</h3>

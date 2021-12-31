@@ -82,7 +82,7 @@ const RegisterModal = () => {
          >
             <div className="form_container">
                <form onSubmit={handleSubmit}>
-                  <button className="close_button" onClick={toggleModal}>
+                  <button className="close_button" onClick={toggleModal} type='button'>
                      X
                   </button>
                   <h3>Register</h3>

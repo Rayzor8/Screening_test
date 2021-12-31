@@ -26,6 +26,17 @@ const AddForm = () => {
       const { name, value } = e.target;
       setFormData({ ...formData, [name]: value });
    };
+
+   const handleResetButton = () => {
+      setFormData({
+         name: '',
+         email: '',
+         comment: '',
+      });
+      setFormErrors({});
+      setIsSubmit(false);
+      setBorderError(false);     
+   }
    
 
    const { name, email, comment } = formData;
@@ -109,7 +120,7 @@ const AddForm = () => {
             <small>{formErrors.comment}</small>
          </div>
 
-         <AddFormButtons />
+         <AddFormButtons  handleResetButton={handleResetButton}/>
       </form>
    );
 };
