@@ -1,11 +1,16 @@
 .main-container{
     display: grid;
     grid-template-columns: 2fr 1fr;
+    margin-top: 2rem;
+    padding: 0 5rem;
+    place-content: center;
 }
 
 @media screen and (max-width: 768px){
     .main-container{
         grid-template-columns: 1fr;
+        margin-top: 1rem;
+        padding: 0 ;
     }
 }
     

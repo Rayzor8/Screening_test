@@ -16,9 +16,9 @@ li .card-cta{
 }
 
 .img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
 }
 
 /* message section */

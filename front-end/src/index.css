@@ -6,13 +6,36 @@
    padding: 0;
 }
 
+:root {
+   /* Brown #71695F Brown Dark #635C53 Green #33B95A Red #FF5F2D Gray #DDDDDD Gray Light #EEEEEE Black #333333 */
+   --main-brown: #71695f;
+   --main-brown-dark: #635c53;
+   --main-green: #33b95a;
+   --main-red: #ff5f2d;
+   --main-gray: #dddddd;
+   --main-gray-light: #eeeeee;
+   --main-black: #333333;
+}
+
+@font-face {
+   font-family: 'PT Sans', sans-serif;
+   src: url(../public/fonts/PT_Sans-Web-Regular.ttf),
+      url(../public/fonts/PT_Sans-Web-Bold.ttf),
+      url(../public/fonts/PT_Sans-Web-Italic.ttf),
+      url(../public/fonts/PT_Sans-Web-BoldItalic.ttf);
+}
+
+
 body {
    width: 100%;
    min-height: 100vh;
+   font-family: 'PT Sans', sans-serif;
 }
 
 button {
    cursor: pointer;
+   font-family: 'PT Sans', sans-serif;
+   font-size: 16px;
 }
 
 input[type='button'],

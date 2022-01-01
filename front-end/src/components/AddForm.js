@@ -8,7 +8,7 @@ const AddForm = () => {
       email: '',
       comment: '',
    });
-   
+
    const [formErrors, setFormErrors] = useState({});
    const [isSubmit, setIsSubmit] = useState(false);
    const [borderError, setBorderError] = useState(false);
@@ -35,9 +35,8 @@ const AddForm = () => {
       });
       setFormErrors({});
       setIsSubmit(false);
-      setBorderError(false);     
-   }
-   
+      setBorderError(false);
+   };
 
    const { name, email, comment } = formData;
 
@@ -51,7 +50,7 @@ const AddForm = () => {
       if (Object.keys(formErrors).length === 0 && isSubmit) {
          document.location.reload();
       }
-   }, [formErrors,isSubmit]);
+   }, [formErrors, isSubmit]);
 
    const validate = (values) => {
       const errorValidate = {};
@@ -75,53 +74,55 @@ const AddForm = () => {
    };
 
    return (
-      <form className="add_form" onSubmit={handleSubmit}>
-         <div className="text-divider">Text divider</div>
-         <div className="input_container">
-            <label htmlFor="name" style={{ visibility: 'hidden' }}>
-               Nama
-            </label>
-            <input
-               style={borderStyle(formErrors.name)}
-               type="text"
-               name="name"
-               placeholder="Name"
-               value={name}
-               onChange={handleChange}
-            />
-            <small>{formErrors.name}</small>
+      <div>
+         <div className="text-divider">
+            <b>Tambahkan Komentar</b>
          </div>
-         <div className="input_container">
-            <label htmlFor="email" style={{ visibility: 'hidden' }}>
-               Email
-            </label>
-            <input
-               style={borderStyle(formErrors.email)}
-               type="text"
-               name="email"
-               placeholder="Email"
-               value={email}
-               onChange={handleChange}
-            />
-            <small>{formErrors.email}</small>
-         </div>
-
-         <div className="input_container">
-            <label htmlFor="komentar" style={{ visibility: 'hidden' }}>
-               Test
-            </label>
-            <textarea
-               style={borderStyle(formErrors.comment)}
-               name="comment"
-               placeholder="Komentar anda"
-               value={comment}
-               onChange={handleChange}
-            />
-            <small>{formErrors.comment}</small>
-         </div>
-
-         <AddFormButtons  handleResetButton={handleResetButton}/>
-      </form>
+         <form className="add_form" onSubmit={handleSubmit}>
+            <div className="input_container">
+               <label htmlFor="name" style={{ visibility: 'hidden' }}>
+                  Nama
+               </label>
+               <input
+                  style={borderStyle(formErrors.name)}
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  value={name}
+                  onChange={handleChange}
+               />
+               <small>{formErrors.name}</small>
+            </div>
+            <div className="input_container">
+               <label htmlFor="email" style={{ visibility: 'hidden' }}>
+                  Email
+               </label>
+               <input
+                  style={borderStyle(formErrors.email)}
+                  type="text"
+                  name="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={handleChange}
+               />
+               <small>{formErrors.email}</small>
+            </div>
+            <div className="input_container">
+               <label htmlFor="komentar" style={{ visibility: 'hidden' }}>
+                  Test
+               </label>
+               <textarea
+                  style={borderStyle(formErrors.comment)}
+                  name="comment"
+                  placeholder="Komentar anda"
+                  value={comment}
+                  onChange={handleChange}
+               />
+               <small>{formErrors.comment}</small>
+            </div>
+            <AddFormButtons handleResetButton={handleResetButton} />
+         </form>
+      </div>
    );
 };
 

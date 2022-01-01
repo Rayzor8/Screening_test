@@ -6,19 +6,12 @@ import ArticleSection from './ArticleSection';
 import AsideSection from './AsideSection';
 import CommentItem from './CommentItem';
 import './css/Comment_lists.css';
-import Header from './Header';
-import LoginModal from './LoginModal';
-import RegisterModal from './RegisterModal';
 
 const CommentLists = () => {
    const { state } = useContext(commentContextData);
    const { comments } = state;
 
    return (
-      <div>
-         <Header />
-         <LoginModal />
-         <RegisterModal />
          <main className="main-container">
             <section>
                <ArticleSection />
@@ -35,7 +28,6 @@ const CommentLists = () => {
             <AsideSection />
             <AddForm />
          </main>
-      </div>
    );
 };
 

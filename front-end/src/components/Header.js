@@ -19,18 +19,20 @@ const Header = () => {
          <div id="brand">
             <a href="/">MyCompany</a>
          </div>
-         <div className="search_bar">
-            <input type="text" className="search_bar" />
-            <button className="search_button">
-               <FaSearch className="search_icon" />
-            </button>
-         </div>
          <nav id="nav" style={showNav ? { right: 0 } : null}>
             <FaWindowClose
                id="navbar_button_close"
                onClick={handleToggleMenu}
             />
-            <ul className="nav_list">
+
+            <div className="search_bar_container">
+               <input type="text" className="search_bar" />
+               <button className="search_button">
+                  <FaSearch className="search_icon" />
+               </button>
+            </div>
+
+            <ul className="nav_list" id='nav_list'>
                <li className="dropdown nav_item">
                   <button className="dropbtn">Categories</button>
                   <div className="dropdown-content">

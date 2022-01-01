@@ -1,63 +1,63 @@
-.add_form{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: yellowgreen;
-    padding: 1rem;
-   
-}
-
 .add_form {
-    display: flex;
-    justify-content: flex-start;
+   display: flex;
+   flex-direction: column;
+   width: 90%;
+   max-width: 500px;
 }
 
-.add_form .input_container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.add_form .input_container {
+   display: flex;
+   flex-direction: column;
 }
 
-.add_form .input_container label{
-    height: 5px;
+.add_form .input_container label {
+   height: 5px;
 }
 
 .add_form .input_container input {
-    border: none;
-    border-radius: 4px;
+   border: none;
+   border-radius: 4px;
 }
 
 .add_form .input_container > * {
-    padding: 4px 5px;
+   padding: 4px 5px;
 }
 
-.add_form .input_container textarea{
-    width: 100%;
-    border-radius: 4px;
-    margin-bottom: 5px;
+.add_form .input_container textarea {
+   width: 100%;
+   border-radius: 4px;
+   margin-bottom: 5px;
 }
 
 .text-divider {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .text-divider::before,
-  .text-divider::after {
-    content: '';
-    height: 1px;
-    background-color: black;
-    flex-grow: 1;
-  }
-  
-  .text-divider::before {
-    gap: 1rem;
-  }
-  
-  .text-divider::after {
+   display: flex;
+   align-items: center;
    gap: 1rem;
-  }
+   margin: 2rem 0;
+}
+
+.text-divider::before,
+.text-divider::after {
+   content: '';
+   height: 1px;
+   background-color: black;
+   flex-grow: 1;
+}
+
+.text-divider::before {
+   gap: 1rem;
+}
+
+.text-divider::after {
+   gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+   .add_form {
+      margin: 0 auto;
+   }
+
+   .text-divider {
+      margin: 1rem 0;
+   }
+}

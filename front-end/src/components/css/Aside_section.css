@@ -20,7 +20,7 @@ aside ul li {
 }
 
 aside ul li > span{
-    background-color: black;
+    background-color: var(--main-brown-dark);
     color: white;
     padding:5px 10px;
     border-radius: 4px;

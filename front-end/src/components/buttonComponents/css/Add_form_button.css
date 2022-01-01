@@ -1,0 +1,19 @@
+.add_form_button_container{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.add_form_button_container input{
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+.add_form_button_container input[type="submit"]{
+    background-color: var(--main-brown-dark);
+    color: white;
+}
+
+.add_form_button_container input[type="button"]{
+    background-color: var(--main-gray);
+}
