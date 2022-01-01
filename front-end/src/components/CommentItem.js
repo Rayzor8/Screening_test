@@ -15,43 +15,45 @@ const CommentItem = ({ data }) => {
                <p>{data.message}</p>
             </div>
          </div>
-         <div className="card-cta">
-            <p>{data.point} Point</p>
-            <ButtonArrowUp
-               data={data}
-               doneUpdate={doneUpdate}
-               setDoneUpdate={setDoneUpdate}
-            />
-            <ButtonArrowDown
-               data={data}
-               doneUpdate={doneUpdate}
-               setDoneUpdate={setDoneUpdate}
-            />
-         </div>
-         {data.replies.length > 0 &&
-            data.replies.map((el) => (
-               <div key={el.id} className="msg-section">
-                  <img src={el.avatar} alt="" className="img-avatar" />
-                  <div>
-                     <h1>{el.author}</h1>
-                     <p>{el.date}</p>
-                     <p>{el.message}</p>
-                     <div className="msg-cta">
-                        <p>{el.point} point</p>
-                        <ButtonArrowUp
-                           data={el}
-                           doneUpdate={doneUpdate}
-                           setDoneUpdate={setDoneUpdate}
-                        />
-                        <ButtonArrowDown
-                           data={el}
-                           doneUpdate={doneUpdate}
-                           setDoneUpdate={setDoneUpdate}
-                        />
+         <section className='comment_section'>
+            <div className="card-cta">
+               <p>{data.point} Point</p>
+               <ButtonArrowUp
+                  data={data}
+                  doneUpdate={doneUpdate}
+                  setDoneUpdate={setDoneUpdate}
+               />
+               <ButtonArrowDown
+                  data={data}
+                  doneUpdate={doneUpdate}
+                  setDoneUpdate={setDoneUpdate}
+               />
+            </div>
+            {data.replies.length > 0 &&
+               data.replies.map((el) => (
+                  <div key={el.id} className="msg-section">
+                     <img src={el.avatar} alt="" className="img-avatar" />
+                     <div className='msg_data_container'>
+                        <h1>{el.author}</h1>
+                        <p>{el.date}</p>
+                        <p>{el.message}</p>
+                        <div className="msg-cta">
+                           <p>{el.point} point</p>
+                           <ButtonArrowUp
+                              data={el}
+                              doneUpdate={doneUpdate}
+                              setDoneUpdate={setDoneUpdate}
+                           />
+                           <ButtonArrowDown
+                              data={el}
+                              doneUpdate={doneUpdate}
+                              setDoneUpdate={setDoneUpdate}
+                           />
+                        </div>
                      </div>
                   </div>
-               </div>
-            ))}
+               ))}
+         </section>
       </li>
    );
 };

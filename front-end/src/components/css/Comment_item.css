@@ -1,18 +1,25 @@
-
 .comment_item{
     list-style: none;
-    background-color: #ccc;
-    padding: 10px 15px;
+    background-color: var(--main-gray-light);
+    padding:  15px;
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
     border-radius: 10px;
 }
 
+.comment_item .comment_section{
+    margin-left: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 li .card-cta{
     display: flex;
     flex-direction: row;
     gap: 0.2rem;
+    align-items: center;
 }
 
 .img{
@@ -23,19 +30,26 @@ li .card-cta{
 
 /* message section */
 .msg-section{
-    background-color: white;
     display: flex;
     gap: 1rem;
     flex-direction: row;
 }
 
+.msg-section .msg_data_container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
 .img-avatar{
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 5px;
 }
 
 .msg-cta{
     display: flex;
     gap: 0.2rem;
+    align-items: center;
+    margin-top: 5px;
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AddFormButtons from './buttonComponents/AddFormButtons';
 import './css/Add_form.css';
+import DeviderBorder from './DeviderBorder';
 
 const AddForm = () => {
    const [formData, setFormData] = useState({
@@ -75,9 +76,7 @@ const AddForm = () => {
 
    return (
       <div>
-         <div className="text-divider">
-            <b>Tambahkan Komentar</b>
-         </div>
+         <DeviderBorder text="Tambahkan Komentar"/>
          <form className="add_form" onSubmit={handleSubmit}>
             <div className="input_container">
                <label htmlFor="name" style={{ visibility: 'hidden' }}>

@@ -34,3 +34,10 @@ aside ul li > a {
 aside ul li > a:hover{
     text-decoration: underline;
 }
+
+@media screen and (max-width:768px){
+    aside{
+        order: 1;
+        margin-bottom: 1rem;
+    }
+}

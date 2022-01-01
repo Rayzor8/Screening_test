@@ -6,28 +6,30 @@ import ArticleSection from './ArticleSection';
 import AsideSection from './AsideSection';
 import CommentItem from './CommentItem';
 import './css/Comment_lists.css';
+import DeviderBorder from './DeviderBorder';
 
 const CommentLists = () => {
    const { state } = useContext(commentContextData);
    const { comments } = state;
 
    return (
-         <main className="main-container">
-            <section>
-               <ArticleSection />
-               <ul className="comment_lists">
-                  {comments && comments.length > 0 ? (
-                     comments.map((data) => (
-                        <CommentItem key={data.id} data={data} />
-                     ))
-                  ) : (
-                     <h1>Loading....</h1>
-                  )}
-               </ul>
-            </section>
-            <AsideSection />
-            <AddForm />
-         </main>
+      <main className="main-container">
+         <section>
+            <ArticleSection />
+            <DeviderBorder text="Komentar"/>
+            <ul className="comment_lists">
+               {comments && comments.length > 0 ? (
+                  comments.map((data) => (
+                     <CommentItem key={data.id} data={data} />
+                  ))
+               ) : (
+                  <h1>Loading....</h1>
+               )}
+            </ul>
+         </section>
+         <AsideSection />
+         <AddForm />
+      </main>
    );
 };
 
