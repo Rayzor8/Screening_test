@@ -4,7 +4,7 @@ import './css/Article_section.css';
 const ArticleSection = () => {
    return (
       <article>
-         <h1>
+         <h1 className='article_title'>
             Lampu webcam tiba-tiba menyala sendiri tanpa membuka applikasi
             webcam
          </h1>

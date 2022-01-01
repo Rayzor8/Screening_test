@@ -30,6 +30,11 @@ body {
    width: 100%;
    min-height: 100vh;
    font-family: 'PT Sans', sans-serif;
+   color: var(--main-black);
+}
+
+h1{
+   font-size: 2rem;
 }
 
 button {

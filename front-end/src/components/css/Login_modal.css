@@ -47,6 +47,17 @@
 .form_container .login_button {
    width: max-content;
    padding: 10px 20px;
+   background-color: var(--main-brown-dark);
+   border: none;
+   color: white;
+   letter-spacing: 1px;
+   border-radius: 3px;
+}
+
+.form_container .form_title{
+   margin-bottom: 1rem;
+   font-weight: bold;
+   font-size: 1.5rem;
 }
 
 .form_container .input_container {
@@ -57,17 +68,21 @@
 
 .form_container .input_container input {
    padding: 10px 20px;
-   border-color: black;
+   border-color: var(--main-brown-dark);
    border-radius: 4px;
+   outline: none;
 }
 
 .form_container .close_button {
    position: absolute;
    top: 0;
    right: 0;
-   background-color: red;
+   background-color: orangered;
+   color: white;
+   font-weight: bold;
    z-index: 1000;
    width: 30px;
    height: 30px;
+   border: none;
 }
 
