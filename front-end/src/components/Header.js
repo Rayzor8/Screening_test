@@ -1,10 +1,19 @@
-import React,{useContext} from 'react';
+import React, { useContext, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import { FaWindowClose } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import './css/Header.css';
 import { commentContextData } from '../contexts/CommentsContext';
 
 const Header = () => {
-   const {dispatch} = useContext(commentContextData);
+   const { dispatch } = useContext(commentContextData);
+   const [toggleMenu, setToggleMenu] = useState(false);
+   const [showNav, setShowNav] = useState(false);
+
+   const handleToggleMenu = () => {
+      setToggleMenu(!toggleMenu);
+      setShowNav(!showNav);
+   };
    return (
       <header>
          <div id="brand">
@@ -16,10 +25,14 @@ const Header = () => {
                <FaSearch className="search_icon" />
             </button>
          </div>
-         <nav id="nav">
-            <ul>
-               <li className="dropdown">
-                  <button className="dropbtn">Dropdown</button>
+         <nav id="nav" style={showNav ? { right: 0 } : null}>
+            <FaWindowClose
+               id="navbar_button_close"
+               onClick={handleToggleMenu}
+            />
+            <ul className="nav_list">
+               <li className="dropdown nav_item">
+                  <button className="dropbtn">Categories</button>
                   <div className="dropdown-content">
                      <a href="*">Linux</a>
                      <a href="*">Windows</a>
@@ -28,14 +41,22 @@ const Header = () => {
                      <a href="*">IOS</a>
                   </div>
                </li>
-               <li onClick={()=>dispatch({type:'TOGGLE_LOGIN'})}>
+               <li
+                  onClick={() => dispatch({ type: 'TOGGLE_LOGIN' })}
+                  className="nav_item"
+               >
                   Login
                </li>
-               <li onClick={()=>dispatch({type:'TOGGLE_REGISTER'})}>
+               <li
+                  onClick={() => dispatch({ type: 'TOGGLE_REGISTER' })}
+                  className="nav_item"
+               >
                   Register
                </li>
             </ul>
          </nav>
+
+         <FaBars id="navbar_button_hamburger" onClick={handleToggleMenu} />
       </header>
    );
 };

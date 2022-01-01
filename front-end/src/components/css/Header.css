@@ -19,10 +19,16 @@ header ul li {
    cursor: pointer;
 }
 
-nav ul {
+#nav .nav_list {
    display: flex;
    flex-direction: row;
    gap: 0.8rem;
+}
+
+#navbar_button_close,
+#navbar_button_hamburger {
+   display: none;
+   cursor: pointer;
 }
 
 .search_bar {
@@ -55,48 +61,96 @@ nav ul {
    border: none;
    background-color: transparent;
    color: gold;
- }
- 
- /* The container <div> - needed to position the dropdown content */
- .dropdown {
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
    position: relative;
    display: inline-block;
- }
- 
- /* Dropdown Content (Hidden by Default) */
- .dropdown-content {
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
    display: none;
    position: absolute;
    background-color: #f1f1f1;
    min-width: 160px;
-   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
    z-index: 1;
- }
- 
- /* Links inside the dropdown */
- .dropdown-content a {
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
    color: black;
    padding: 12px 16px;
    text-decoration: none;
    display: block;
- }
- 
- /* Change color of dropdown links on hover */
- .dropdown-content a:hover {background-color: #ddd;}
- 
- /* Show the dropdown menu on hover */
- .dropdown:hover .dropdown-content {display: block;}
- 
+}
 
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+   background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+   display: block;
+}
+#nav .nav_item{
+   transition: 200ms ease-in;
+}
+
+#nav .nav_item:hover{
+   color: white;
+}
 
 @media screen and (max-width: 768px) {
-   header  {
+   header {
       justify-content: start;
    }
    .search_bar {
       display: none;
    }
-   nav{
-       display: none;
+   #navbar_button_hamburger {
+      display: inline;
+      font-size: 30px;
+      position: absolute;
+      right: 20px;
+   }
+
+   #navbar_button_close {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      display: flex;
+      font-size: 30px;
+      color: white;
+   }
+
+   #navbar_button_close:hover{
+      color: red;
+   }
+
+   #nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      background-color: rebeccapurple;
+      width: 60%;
+      height: 100%;
+      padding: 20px;
+      z-index: 10;
+      transition: 0.5s;
+   }
+
+   #nav .nav_list {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3rem;
+   }
+
+   #nav .nav_item{
+      margin: 1rem 0;
    }
 }
