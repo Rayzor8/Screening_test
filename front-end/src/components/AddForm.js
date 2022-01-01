@@ -116,6 +116,8 @@ const AddForm = () => {
                   placeholder="Komentar anda"
                   value={comment}
                   onChange={handleChange}
+                  rows="4"
+                  cols="100"
                />
                <small>{formErrors.comment}</small>
             </div>

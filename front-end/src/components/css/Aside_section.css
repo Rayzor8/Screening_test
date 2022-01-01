@@ -29,6 +29,7 @@ aside ul li > span{
 aside ul li > a {
     text-decoration: none;
     color: black;
+    font-size: calc(0.7rem + 0.3vw);
 }
 
 aside ul li > a:hover{

@@ -53,3 +53,17 @@ li .card-cta{
     align-items: center;
     margin-top: 5px;
 }
+
+@media screen and (max-width: 768px) {
+    .comment_item{
+        padding: 10px;
+    }
+    .img{
+        width: 60px;
+        height: 60px;
+    }
+    .img-avatar{
+        width: 30px;
+        height: 30px;
+    }
+}

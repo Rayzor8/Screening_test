@@ -26,7 +26,7 @@ const Header = () => {
             />
 
             <div className="search_bar_container">
-               <input type="text" className="search_bar" />
+               <input type="text" className="search_bar" placeholder='Search' />
                <button className="search_button">
                   <FaSearch className="search_icon" />
                </button>

@@ -85,7 +85,7 @@
    position: absolute;
    top: 0;
    right: 0;
-   background-color: orangered;
+   background-color: var(--main-red);
    color: white;
    z-index: 1000;
    width: 30px;

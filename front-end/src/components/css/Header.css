@@ -45,15 +45,19 @@ header ul li {
    gap: 0.2rem;
    position: relative;
    margin-right: 1rem;
-  
 }
 
-.search_bar_container  .search_bar{
+.search_bar_container .search_bar {
    border-radius: 3px;
-   padding: 5px 0;
+   padding: 7px 5px;
    border: none;
+   width: 500px;
+   background-color: var(--main-gray);
 }
 
+.search_bar_container .search_bar:focus{
+   background-color: white;
+}
 .search_button {
    position: absolute;
    right: 0;
@@ -62,11 +66,12 @@ header ul li {
    border-radius: 3px;
    border: none;
    padding: 0 5px;
+   background-color: var(--main-gray);
 }
 
 .search_icon {
    color: black;
-   background-color: white;
+   background-color: var(--main-gray);
    display: block;
    width: 100%;
 }
@@ -128,21 +133,20 @@ header ul li {
       padding: 20px;
    }
 
-   #nav{
+   #nav {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-end;
       padding-top: 100px;
    }
 
-   #nav .search_bar_container{
+   #nav .search_bar_container {
       margin: 0;
       width: 100%;
    }
 
    #nav .search_bar_container .search_bar {
       width: 100%;
-
    }
    #navbar_button_hamburger {
       display: inline;
@@ -158,12 +162,11 @@ header ul li {
       top: 10px;
       display: flex;
       font-size: 30px;
-      color: orangered;
+      color: var(--main-red);
    }
 
-
    #navbar_button_close:hover {
-      color: red;
+      color: orangered;
    }
 
    #nav {

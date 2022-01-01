@@ -34,7 +34,18 @@ body {
 }
 
 h1{
-   font-size: 2rem;
+   font-size: calc(1rem + 1vw);
+}
+
+h2{
+   font-size: calc(1rem + 0.5vw);
+   margin-bottom: 5px;
+}
+
+p{
+   font-size: calc(0.7rem + 0.3vw);
+   margin-bottom: 5px;
+   font-weight: 300;
 }
 
 button {
@@ -47,3 +58,5 @@ input[type='button'],
 input[type='submit'] {
    cursor: pointer;
 }
+
+

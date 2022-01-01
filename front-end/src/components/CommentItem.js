@@ -10,7 +10,7 @@ const CommentItem = ({ data }) => {
          <div className="body-section">
             <img src={data.avatar} alt="avatar" className="img" />
             <div>
-               <h1>{data.author}</h1>
+               <h2>{data.author}</h2>
                <p>{data.date}</p>
                <p>{data.message}</p>
             </div>
@@ -34,7 +34,7 @@ const CommentItem = ({ data }) => {
                   <div key={el.id} className="msg-section">
                      <img src={el.avatar} alt="" className="img-avatar" />
                      <div className='msg_data_container'>
-                        <h1>{el.author}</h1>
+                        <h2>{el.author}</h2>
                         <p>{el.date}</p>
                         <p>{el.message}</p>
                         <div className="msg-cta">
