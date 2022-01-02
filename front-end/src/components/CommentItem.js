@@ -4,7 +4,11 @@ import ButtonArrowUp from './buttonComponents/ButtonArrowUp';
 import './css/Comment_item.css';
 
 const CommentItem = ({ data }) => {
-   const [doneUpdate, setDoneUpdate] = React.useState(false);
+   const [doneUpdateCommentUp, setDoneUpdateCommentUp] = React.useState(false);
+   const [doneUpdateReplyUp, setDoneUpdateReplyUp] = React.useState(false);
+   const [doneUpdateCommentDown, setDoneUpdateCommentDown] = React.useState(false);
+   const [doneUpdateReplyDown, setDoneUpdateReplyDown] = React.useState(false);
+    
    return (
       <li className="comment_item">
          <div className="body-section">
@@ -17,16 +21,20 @@ const CommentItem = ({ data }) => {
          </div>
          <section className='comment_section'>
             <div className="card-cta">
-               <p>{data.point} Point</p>
+               <p className='point'>{data.point} Point</p>
                <ButtonArrowUp
                   data={data}
-                  doneUpdate={doneUpdate}
-                  setDoneUpdate={setDoneUpdate}
+                  doneUpdate={doneUpdateCommentUp}
+                  setDoneUpdate={setDoneUpdateCommentUp}
+                  disable={doneUpdateCommentDown}
+                  buttonType={'comment'}
                />
                <ButtonArrowDown
                   data={data}
-                  doneUpdate={doneUpdate}
-                  setDoneUpdate={setDoneUpdate}
+                  doneUpdate={doneUpdateCommentDown}
+                  setDoneUpdate={setDoneUpdateCommentDown}
+                  disable={doneUpdateCommentUp}
+                  buttonType={'comment'}
                />
             </div>
             {data.replies.length > 0 &&
@@ -38,16 +46,20 @@ const CommentItem = ({ data }) => {
                         <p>{el.date}</p>
                         <p>{el.message}</p>
                         <div className="msg-cta">
-                           <p>{el.point} point</p>
+                           <p className='point'>{el.point} point</p>
                            <ButtonArrowUp
+                              dataId={data.id}
                               data={el}
-                              doneUpdate={doneUpdate}
-                              setDoneUpdate={setDoneUpdate}
+                              doneUpdate={doneUpdateReplyUp}
+                              setDoneUpdate={setDoneUpdateReplyUp}
+                              buttonType={'reply'}
                            />
                            <ButtonArrowDown
+                              dataId={data.id}
                               data={el}
-                              doneUpdate={doneUpdate}
-                              setDoneUpdate={setDoneUpdate}
+                              doneUpdate={doneUpdateReplyDown}
+                              setDoneUpdate={setDoneUpdateReplyDown}
+                              buttonType={'reply'}
                            />
                         </div>
                      </div>

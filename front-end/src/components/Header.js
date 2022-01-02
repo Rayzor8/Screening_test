@@ -17,7 +17,7 @@ const Header = () => {
    return (
       <header>
          <div id="brand">
-            <a href="/">MyCompany</a>
+            <h1 className='brand_text'>Forum anak IT</h1>
          </div>
          <nav id="nav" style={showNav ? { right: 0 } : null}>
             <FaWindowClose

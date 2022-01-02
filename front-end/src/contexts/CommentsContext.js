@@ -17,7 +17,7 @@ let formInitialState = {}
 const CommentsContext = ({ children }) => {
    const [state, dispatch] = useReducer(commentsReducer, initialState);
    const [forms,formsDispatch] = useReducer(formsReducer,formInitialState)
-   console.log(state)
+
 
    useEffect(() => {
       const fetchData = async () => {

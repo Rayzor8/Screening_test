@@ -8,6 +8,11 @@ header {
    width: 100%;
 }
 
+header .brand_text {
+   font-size: 1.5rem;
+   color: white;
+}
+
 header a {
    color: var(--main-gray-light);
    text-decoration: none;
@@ -55,7 +60,7 @@ header ul li {
    background-color: var(--main-gray);
 }
 
-.search_bar_container .search_bar:focus{
+.search_bar_container .search_bar:focus {
    background-color: white;
 }
 .search_button {
