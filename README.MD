@@ -1,4 +1,3 @@
-# Suitmedia test
 
 ### First, open file server-api and Run server on server-api using command "npm start", run on  http://localhost:3100
 
