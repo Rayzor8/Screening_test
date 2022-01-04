@@ -8,7 +8,8 @@ const CommentItem = ({ data }) => {
    const [doneUpdateReplyUp, setDoneUpdateReplyUp] = React.useState(false);
    const [doneUpdateCommentDown, setDoneUpdateCommentDown] = React.useState(false);
    const [doneUpdateReplyDown, setDoneUpdateReplyDown] = React.useState(false);
-    
+
+   
    return (
       <li className="comment_item">
          <div className="body-section">
@@ -48,15 +49,17 @@ const CommentItem = ({ data }) => {
                         <div className="msg-cta">
                            <p className='point'>{el.point} point</p>
                            <ButtonArrowUp
-                              dataId={data.id}
-                              data={el}
+                              dataId={el.id}  
+                              data={data}
+                              disable={doneUpdateCommentDown}
                               doneUpdate={doneUpdateReplyUp}
                               setDoneUpdate={setDoneUpdateReplyUp}
                               buttonType={'reply'}
                            />
                            <ButtonArrowDown
-                              dataId={data.id}
-                              data={el}
+                              dataId={el.id}
+                              data={data}
+                              disable={doneUpdateCommentUp}
                               doneUpdate={doneUpdateReplyDown}
                               setDoneUpdate={setDoneUpdateReplyDown}
                               buttonType={'reply'}

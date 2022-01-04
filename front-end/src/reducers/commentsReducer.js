@@ -13,6 +13,26 @@ export const commentsReducer = (state, action) => {
       };
    }
 
+   if (action.type === 'UPDATE_REPLY') {
+      return {
+         ...state,
+         comments: state.comments.map((comment) =>
+            comment.id === action.payload.id
+               ? {
+                    ...comment,
+                    replies: comment.replies.map((reply) =>
+                       reply.id === action.payload.dataId
+                          ? action.payload.updateReply.replies.find(
+                               (el) => el.id === action.payload.dataId
+                            )
+                          : reply
+                    ),
+                 }
+               : comment
+         ),
+      };
+   }
+
    if (action.type === 'TOGGLE_LOGIN')
       return { ...state, loginModal: !state.loginModal };
 
