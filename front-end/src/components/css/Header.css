@@ -56,7 +56,7 @@ header ul li {
    border-radius: 3px;
    padding: 7px 5px;
    border: none;
-   width: 500px;
+   width: 100%;
    background-color: var(--main-gray);
 }
 
@@ -150,9 +150,6 @@ header ul li {
       width: 100%;
    }
 
-   #nav .search_bar_container .search_bar {
-      width: 100%;
-   }
    #navbar_button_hamburger {
       display: inline;
       font-size: 30px;
@@ -196,4 +193,10 @@ header ul li {
    /* #nav .nav_item{
       margin: rem 0;
    } */
+}
+
+@media screen and (min-width: 1024px) {
+   #nav .search_bar_container .search_bar {
+      width: 500px;
+   }
 }

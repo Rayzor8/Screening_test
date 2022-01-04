@@ -17,7 +17,6 @@ const ButtonArrowDown = ({
 
    const handleEdit = async (id) => {
       const updatePost = { ...data, point: data.point - 1 };
-
       if (buttonType === 'comment') {
          await axios.put(`${APIURL}/${id}`, updatePost);
          dispatch({ type: 'UPDATE_COMMENT', payload: { id, updatePost } });

@@ -5,10 +5,9 @@ import './css/Comment_item.css';
 
 const CommentItem = ({ data }) => {
    const [doneUpdateCommentUp, setDoneUpdateCommentUp] = React.useState(false);
-   const [doneUpdateReplyUp, setDoneUpdateReplyUp] = React.useState(false);
    const [doneUpdateCommentDown, setDoneUpdateCommentDown] = React.useState(false);
+   const [doneUpdateReplyUp, setDoneUpdateReplyUp] = React.useState(false);
    const [doneUpdateReplyDown, setDoneUpdateReplyDown] = React.useState(false);
-
    
    return (
       <li className="comment_item">
@@ -51,7 +50,7 @@ const CommentItem = ({ data }) => {
                            <ButtonArrowUp
                               dataId={el.id}  
                               data={data}
-                              disable={doneUpdateCommentDown}
+                              disable={doneUpdateReplyDown}
                               doneUpdate={doneUpdateReplyUp}
                               setDoneUpdate={setDoneUpdateReplyUp}
                               buttonType={'reply'}
@@ -59,7 +58,7 @@ const CommentItem = ({ data }) => {
                            <ButtonArrowDown
                               dataId={el.id}
                               data={data}
-                              disable={doneUpdateCommentUp}
+                              disable={doneUpdateReplyUp}
                               doneUpdate={doneUpdateReplyDown}
                               setDoneUpdate={setDoneUpdateReplyDown}
                               buttonType={'reply'}
