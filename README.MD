@@ -3,5 +3,4 @@
 
 ### Second, open file front-end and Run react app script, run on  http://localhost:3000
 
-### Name : Ray
-### Email : rayhidayat220@gmail.com
+
